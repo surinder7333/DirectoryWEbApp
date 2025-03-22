@@ -57,7 +57,7 @@ Copy
 Edit
 cd server
 npm start
-The backend runs on http://localhost:8080
+The backend runs on http://localhost:8080 or https://directorywebapp.onrender.com
 
 4️⃣ Start the Frontend
 sh

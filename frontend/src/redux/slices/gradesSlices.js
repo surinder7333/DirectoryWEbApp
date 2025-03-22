@@ -1,7 +1,8 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8080/api/grades';
+// const API_URL = 'http://localhost:8080/api/grades';
+const API_URL = 'https://directorywebapp.onrender.com/api/grades';
 
 export const fetchGrades = createAsyncThunk(
   'grades/fetchGrades',

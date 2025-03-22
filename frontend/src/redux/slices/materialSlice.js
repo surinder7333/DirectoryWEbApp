@@ -1,7 +1,8 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8080/api/materials';
+// const API_URL = 'http://localhost:8080/api/materials';
+const API_URL = 'https://directorywebapp.onrender.com/api/materials';
 
 export const fetchMaterials = createAsyncThunk(
   'materials/fetchMaterials',

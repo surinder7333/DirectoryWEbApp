@@ -1,10 +1,12 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "axios";
 
-const API_URL = 'http://localhost:8080/api/products';
+// const API_URL = 'http://localhost:8080/api/products';
+
+const API_URL = "https://directorywebapp.onrender.com/api/products";
 
 export const fetchProducts = createAsyncThunk(
-  'products/fetchProducts',
+  "products/fetchProducts",
   async () => {
     const response = await axios.get(API_URL);
     return response.data;
@@ -12,7 +14,7 @@ export const fetchProducts = createAsyncThunk(
 );
 
 export const addProduct = createAsyncThunk(
-  'products/addProduct',
+  "products/addProduct",
   async (productData) => {
     const response = await axios.post(API_URL, productData);
     return response.data;
@@ -20,24 +22,24 @@ export const addProduct = createAsyncThunk(
 );
 
 const productsSlice = createSlice({
-  name: 'products',
+  name: "products",
   initialState: {
     items: [],
-    status: 'idle',
+    status: "idle",
     error: null,
   },
   reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(fetchProducts.pending, (state) => {
-        state.status = 'loading';
+        state.status = "loading";
       })
       .addCase(fetchProducts.fulfilled, (state, action) => {
-        state.status = 'succeeded';
+        state.status = "succeeded";
         state.items = action.payload;
       })
       .addCase(fetchProducts.rejected, (state, action) => {
-        state.status = 'failed';
+        state.status = "failed";
         state.error = action.error.message;
       })
       .addCase(addProduct.fulfilled, (state, action) => {

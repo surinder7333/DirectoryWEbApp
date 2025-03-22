@@ -13,14 +13,14 @@ Version Control: Git, GitHub
 
 Setup Instructions
 1. Clone the Repository
-sh
+
 Copy
 Edit
 git clone https://github.com/surinder7333/DirectoryWEbApp.git
 cd DirectoryWEbApp
 2. Install Dependencies
 Backend Setup
-sh
+
 Copy
 Edit
 cd backend

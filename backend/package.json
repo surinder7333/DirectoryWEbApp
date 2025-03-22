@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start":"nodemon server.js",
+    "start":"node server.js",
     "seed":"node seed.js",
     "build": "echo 'No build required for backend'",
 

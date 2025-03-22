@@ -1,4 +1,4 @@
-Assignment: Directory Listing
+ Directory Listing
 Project Overview
 its a  Directory Listing Web Application using React, Redux Toolkit, Node.js, Express.js, and MongoDB. The application allows users to manage products, apply filters, and perform quick edits efficiently.
 

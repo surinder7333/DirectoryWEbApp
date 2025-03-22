@@ -1,112 +1,75 @@
-# Project Information
+Assignment: Directory Listing
+Project Overview
+its a  Directory Listing Web Application using React, Redux Toolkit, Node.js, Express.js, and MongoDB. The application allows users to manage products, apply filters, and perform quick edits efficiently.
 
-This is a web application for managing products, materials, and grades. It allows users to add products, update details using quick edit, filter the product list, and perform bulk actions. The project is built using **React, Redux Toolkit, Node.js, Express, and MongoDB**.
+Technology Stack
+Frontend: React, Redux Toolkit
 
----
+Backend: Node.js, Express.js
 
-## 🚀 Features
+Database: MongoDB
 
-### ✅ Product List (Home Page)
-- View the list of products with filtering and sorting options.
-- Filter by **Product Type** and **Material**.
-- Perform **Bulk Edit** to update multiple products at once.
-- **Quick Edit** to update product details inline.
-- Show **Product Count**.
+Version Control: Git, GitHub
 
-### ✅ Product Management
-- Store products, materials, and grades in separate MongoDB collections.
-- Combine selected **Product, Material, and Grade** to generate a **final product name**.
-- Maintain a **product combination collection** with price, currency, shape, length, and thickness.
-
-### ✅ Product Editing
-- Expand a row using **Quick Edit** to modify shape, length, price, etc.
-- Update details and reflect changes in the listing.
-
-### ✅ Tech Stack
-- **Frontend:** React + Redux Toolkit
-- **Backend:** Node.js + Express
-- **Database:** MongoDB
-
----
-
-## 🛠️ Installation & Setup
-
-### 1️⃣ Clone the Repository
-```sh
-git clone https://github.com/your-username/product-management.git
-cd product-management
-
-
- Install Dependencies
-Frontend Setup
+Setup Instructions
+1. Clone the Repository
 sh
 Copy
 Edit
-cd client
-npm install
+git clone https://github.com/surinder7333/DirectoryWEbApp.git
+cd DirectoryWEbApp
+2. Install Dependencies
 Backend Setup
 sh
 Copy
 Edit
-cd server
+cd backend
 npm install
-⚙️ Running the Application
-3️⃣ Start the Backend Server
+Frontend Setup
 sh
 Copy
 Edit
-cd server
-npm start
-The backend runs on http://localhost:8080
-
-4️⃣ Start the Frontend
+cd ../frontend
+npm install
+3. Configure Environment Variables
+Create a .env file in the backend folder and add:
+the mongo connection string and port.
+4. Start the Application
+5. for basic product, material, grades seed data run the npm run seed command
+Run Backend
 sh
 Copy
 Edit
-cd client
+cd backend
 npm start
-The frontend runs on http://localhost:5173
+Backend runs on http://localhost:8080
 
-│
-│── README.md              # Project Documentation
-📌 How to Use
-1️⃣ Adding a Product
-Click "Add Product".
+Run Frontend
+sh
+Copy
+Edit
+cd frontend
+npm start
+Frontend runs on http://localhost:5173
 
-Select a Product Type, Material, and Grade.
+Features to Implement
+1. Product Listing (Home Page)
+Display a list of products with filtering and sorting options.
 
-Submit to generate a final product combination.
+Allow bulk actions on multiple selected products.
 
-2️⃣ Quick Edit
-Click "Quick Edit" on any product.
+2. Database Collections
+Product Collection: Store product types (Pipes, Tubing, etc.).
 
-Modify details like Shape, Length, Price.
+Material Collection: Store materials (Stainless Steel, Carbon Steel, etc.).
 
-Click Update to save.
+Grade Collection: Store grades (A105, 304, etc.).
 
-3️⃣ Bulk Edit
-Select multiple products.
+Product-Combination Collection: Store product-material-grade combinations with additional details.
 
-Apply bulk updates to selected items.
+3. Product Addition & Editing
+Add new products with a modal form.
 
-🛠 API Endpoints
-Method	Endpoint	Description
-GET	/api/products	Fetch all products
-POST	/api/products	Add a new product
-PUT	/api/products/:id	Update product details
-DELETE	/api/products/:id	Delete a product
-GET	/api/materials	Fetch all materials
-GET	/api/grades	Fetch all grades
-💡 Troubleshooting
-MongoDB Connection Error?
+Quick edit feature to update details like shape, length, thickness, and price.
 
-Ensure MongoDB is running locally or provide a correct connection string.
-
-React App Not Starting?
-
-Check if ports 5173 (frontend) and 5000 (backend) are free.
-
-Backend API Not Responding?
-
-Use Postman or cURL to test API endpoints.
-
+Bulk edit feature to update multiple products simultaneously
